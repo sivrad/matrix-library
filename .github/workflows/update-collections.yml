@@ -1,0 +1,11 @@
+name: npm-publish
+on:
+    workflow_dispatch:
+jobs:
+    update-collections:
+        name: Update all Collections
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - run: bash ./scripts/update_collections.sh
