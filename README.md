@@ -1,18 +1,18 @@
-<p align="center"><img height="220px" src="https://avatars.githubusercontent.com/u/76859002?s=200&v=4" alt="Logo" /><p>
-
+<p align="center"><img height="220px" src="https://i.imgur.com/UMHxlIV.png" alt="Logo" /><p>
 <p align="center">
-  <strong>{Name}</strong><br />
-  <sub>{Description}</sub>
+  <strong>Matrix Library</strong><br />
+  <sub>The umbrella library for all Matrix types.</sub>
+</p>
+<p align="center">
+  [ <a href="#installation">Installation 💾</a> | <a href="#usage">Usage 🤓</a> | <a href="https://www.npmjs.com/package/@sivrad/matrix-library">NPM 📦</a> | <a href="https://github.com/sivrad/matrix-library">Github 🕸</a> ]
 </p>
 
-<p align="center">
-  [ <a href="#installation">Installation 💾</a> | <a href="#usage">Usage 🤓</a> | <a href="https://www.npmjs.com/package/@sivrad/PACKAGE_NAME">NPM 📦</a> | <a href="https://github.com/sivrad/readme-template">Github 🕸</a> ]
-</p>
+# About
 
-# Installation
+The MOT Lib is the library that contains all the MOT types.
 
-```sh
-yarn add @sivrad/PACKAGE_NAME
-```
+# Packages
 
-# Usage
+| Name                                                                             | Description                                 | Version | Note                          |
+| -------------------------------------------------------------------------------- | ------------------------------------------- | ------- | ----------------------------- |
+| [matrix-collection-example](https://github.com/sivrad/matrix-collection-example) | An example of a matrix collection template. | 1.0.0   | Excluded: Not a real package. |

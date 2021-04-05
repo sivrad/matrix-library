@@ -1,0 +1,19 @@
+name: Update Collections
+on:
+    workflow_dispatch:
+jobs:
+    update-collections:
+        name: Update Collections
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Setup Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+                  registry-url: https://registry.npmjs.org/
+            - name: Yarn install
+              run: yarn install
+            - name: Update Collections
+              run: yarn build
