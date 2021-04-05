@@ -8,4 +8,4 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
-            - run: bash ./scripts/update_collections.sh
+            - run: 'while read in; do curl --location --request POST https://api.github.com/repos/sivrad/matrix-collection-$in/actions/workflows/update-tools.yml/dispatches --header ''Accept: application/vnd.github.everest-preview+json'' --header ''Authorization: token ${{ secrets.REPO_ACCESS_TOKEN }}'' --header ''Content-Type: application/json'' --data-raw ''{"ref": "main"}''; done < ./collection-names.txt'
