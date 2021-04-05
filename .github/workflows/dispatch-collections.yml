@@ -1,9 +1,9 @@
-name: npm-publish
+name: Dispatch Collections
 on:
     workflow_dispatch:
 jobs:
-    update-collections:
-        name: Update all Collections
+    dispatch-collections:
+        name: Dispatch to all Collections
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
