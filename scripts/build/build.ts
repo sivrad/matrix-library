@@ -34,4 +34,9 @@ const build = async (): Promise<void> => {
     ]);
 };
 
-build();
+try {
+    build();
+} catch (e) {
+    console.log(e);
+    process.exit(1);
+}

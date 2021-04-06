@@ -20,6 +20,8 @@ jobs:
               run: yarn install
             - name: Update Collections
               run: yarn build
+              env:
+                  REPO_ACCESS_TOKEN: ${{ REPO_ACCESS_TOKEN  }}
             - name: Commit files
               run: |
                   git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
