@@ -30,6 +30,7 @@ jobs:
             - name: Commit files
               run: echo ::set-output name=hasChanges::$(git commit -m "Updated Collections." <<< $result)
             - name: Push Changes
+              if: steps.check.outputs.hasChanges != ''
               uses: ad-m/github-push-action@master
               with:
                   github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
