@@ -30,10 +30,10 @@ jobs:
             - name: Check for Changes
               run: echo ::set-output name=hasChanges::$(git status --porcelain)
             - name: Commit
-              if: steps.check.outputs.hasChanges
+              if: steps.check.outputs.hasChanges != ''
               run: git commit -m "Updated Collections."
             - name: Push Changes
-              if: steps.check.outputs.hasChanges
+              if: steps.check.outputs.hasChanges != ''
               uses: ad-m/github-push-action@master
               with:
                   github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
