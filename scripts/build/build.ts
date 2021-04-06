@@ -7,6 +7,7 @@ import {
     createSourceDirectory,
     createIndexFile,
     createCollectionNamesFile,
+    updatePackages,
 } from './files';
 
 const build = async (): Promise<void> => {
@@ -17,7 +18,7 @@ const build = async (): Promise<void> => {
     // Root dir './'
     Promise.all([
         // Update './package.json'
-        // updatePackageJSON(repositories),
+        updatePackages(repositories),
         // Update './README.md'
         updateREADME(repositories),
         // Update Collection Names

@@ -10,6 +10,7 @@ import {
 } from './constants';
 import { GithubRepository } from './types';
 import { log } from './log';
+import { exec } from 'child_process';
 
 export const createSourceDirectory = async (): Promise<void> => {
     if (existsSync(SOURCE_DIR)) return;
@@ -31,6 +32,35 @@ const createPackageName = (name: string): string => {
         name = name.replace(`${NPM_ORGANIZATION_NAME}-`, '');
     // Add '@sivrad/'
     return `@sivrad/${name}`;
+};
+
+export const updatePackages = async (
+    repositories: GithubRepository[],
+): Promise<void> => {
+    log('Updating packages');
+    const packages = repositories.filter(
+        (repository) => !repository.excludeFromPackage,
+    );
+    if (packages.length == 0) return;
+    const command = `yarn add ${packages
+        .map((repository) => repository.full_name)
+        .join(' ')}`;
+    try {
+        exec(command, (error, stdout, stderr) => {
+            if (error) {
+                console.log(`error: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.log(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+        });
+    } catch (e) {
+        console.error(e);
+        throw e;
+    }
 };
 
 export const updatePackageJSON = async (
@@ -86,7 +116,11 @@ export const createIndexFile = async (
 ): Promise<void> => {
     log("Creating  './src/index.ts'");
     let sourceCode = '// THIS FILE WAS AUTO GENERATED, DO NOT EDIT DIRECTLY\n';
-    for (const repository of repositories) {
+    const packages = repositories.filter(
+        (repository) => !repository.excludeFromPackage,
+    );
+    if (packages.length == 0) return;
+    for (const repository of packages) {
         const packageName = createPackageName(repository.name);
         sourceCode += `export * from '${packageName}';`;
     }
