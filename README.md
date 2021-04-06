@@ -8,11 +8,10 @@
 </p>
 
 # About
-
-The MOT Lib is the library that contains all the MOT types.
-
+The Matrix Library is the library that contains all the Matrix types.
 # Packages
+| Name | Description | Version | Note |
+|------|-------------|---------|------|
+[matrix-collection-template](https://github.com/sivrad/matrix-collection-template) | Template for creating a new Matrix collection. | 1.0.0 | Excluded: Not a real package. |
+[matrix-collection-example](https://github.com/sivrad/matrix-collection-example) | An example of a matrix collection template. | 1.0.0 | Excluded: Not a real package. |
 
-| Name                                                                             | Description                                 | Version | Note                          |
-| -------------------------------------------------------------------------------- | ------------------------------------------- | ------- | ----------------------------- |
-| [matrix-collection-example](https://github.com/sivrad/matrix-collection-example) | An example of a matrix collection template. | 1.0.0   | Excluded: Not a real package. |
