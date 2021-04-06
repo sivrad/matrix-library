@@ -12,5 +12,5 @@ The Matrix Library is the library that contains all the Matrix types.
 # Packages
 | Name | Description | Version | Note |
 |------|-------------|---------|------|
-[matrix-collection-example](https://github.com/sivrad/matrix-collection-example) | An example of a matrix collection template. | 1.0.0 | Excluded: Not a real package. |
+[matrix-collection-std](https://github.com/sivrad/matrix-collection-std) | The Standard Matrix Collection. | 1.0.0 |  |
 

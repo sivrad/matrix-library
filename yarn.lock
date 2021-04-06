@@ -67,6 +67,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
+"@sivrad/matrix-collection-name@sivrad/matrix-collection-std":
+  version "1.0.0"
+  resolved "https://codeload.github.com/sivrad/matrix-collection-std/tar.gz/765e17cf7cd2041e76e58303e347159e0115663f"
+
 "@types/json-schema@^7.0.3":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
