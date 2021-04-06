@@ -34,7 +34,7 @@ jobs:
               if: steps.check.outputs.hasChanges == 'change'
               run: git commit -m "Updated Collections."
             - name: Push Changes
-              if: steps.check.outputs.hasChanges == 'chang'
+              if: steps.check.outputs.hasChanges == 'change'
               uses: ad-m/github-push-action@master
               with:
                   github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
