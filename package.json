@@ -38,6 +38,7 @@
         "dist"
     ],
     "dependencies": {
-        "@sivrad/matrix-collection-name": "sivrad/matrix-collection-std"
+        "@sivrad/matrix-collection-name": "sivrad/matrix-collection-std",
+        "@sivrad/matrix-collection-std": "sivrad/matrix-collection-std"
     }
 }
