@@ -78,11 +78,6 @@
     "@sivrad/matrix" "^1.0.11"
     faunadb "^4.1.3"
 
-"@sivrad/matrix@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@sivrad/matrix/-/matrix-1.0.5.tgz#1d5d64672902311e97adaedd8d84dae3057b1ff6"
-  integrity sha512-5ev313fKgMJoQ9sTfckkNVWzVTi/myyHpO85mREoNeVFRV038dSm8tzMHo1yTv4bV7QiyD0p0s334XJaekmjYA==
-
 "@sivrad/matrix@^1.0.11":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@sivrad/matrix/-/matrix-1.0.11.tgz#61446ba64f12a8b9b64d08e565ddf81e3cb3b73e"
